@@ -16,4 +16,5 @@ app.set("view engine", "ejs");
 
 /** 4-ROUTERS **/
 
-export default app; // module.exports = app; => COMMON JS
+export default app; // ESJS module JS
+// module.exports = app; => COMMON JS
