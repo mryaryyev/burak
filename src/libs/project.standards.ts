@@ -7,3 +7,10 @@
     css => SNAKE                            button_style
 - Error handling
 */
+
+/*
+ Traditional API
+ RESP API
+ GraphQL API
+ ...
+ */
