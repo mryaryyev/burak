@@ -1,5 +1,23 @@
 console.log("TRAIN AREA!");
 
+/* O-TASk
+Shunday function yozing, u har xil valuelardan iborat array qabul qilsin
+va array ichidagi sonlar yigindisini hisoblab chiqqan javobni qaytarsin.
+MASALAN: calculateSumOfNumbers([10, "10", {son: 10}, true, 35]) return 45.
+*/
+function calculateSumOfNumbers(params: any[]) {
+  let sum: number = 0;
+  for (let i = 0; i < params.length; i++) {
+    if (typeof params[i] === "number") {
+      sum += params[i];
+    }
+  }
+  return sum;
+}
+const result1 = calculateSumOfNumbers([10, "10", { son: 10 }, true, 35]);
+console.log(result1);
+const result2 = calculateSumOfNumbers(["10", { son: 10 }, true, "MIT-5", 100]);
+console.log(result2);
 
 /* N-TASK
 Shunday function yozing, u string qabul qilsin
