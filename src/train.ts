@@ -1,11 +1,13 @@
 console.log("TRAIN AREA!");
 
+
 /* N-TASK
 Shunday function yozing, u string qabul qilsin
 va string palindrom yani togri oqilganda ham, orqasidan oqilganda
 ham bir hil oqiladigan soz ekanligini aniqlab boolean qiymat qaytarsin.
 MASALAN: palindromCheck("dad") return true; palindromCheck("son") return false.
 */
+/*
 function palindromCheck(params: string) {
   const paramsArray = params.split("");
   let reverse: string[] = [];
@@ -28,6 +30,7 @@ console.log(result2);
 
 const result3 = palindromCheck("mom");
 console.log(result3);
+*/
 
 /* M-TASK
 Shunday function yozing,
