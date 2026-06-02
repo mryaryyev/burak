@@ -1,10 +1,28 @@
 console.log("TRAIN AREA!");
 
+/* P-TASK
+Shunday function yozing, u object qabul qilsin
+va arrayni object arrayga otkazib arrayni qaytarsin.
+MASALAN: objectToArray({a: 10, b: 20}) return [["a", 10], ["b", 20]].
+*/
+function objectToArray(params: { [key: string]: any }) {
+  let result = [];
+  for (let key in params) {
+    result.push([key, params[key]]);
+  }
+  return result;
+}
+const result1 = objectToArray({ a: 10, b: 20 });
+console.log(result1);
+const result2 = objectToArray({ KR: 82, TM: 993 });
+console.log(result2);
+
 /* O-TASk
 Shunday function yozing, u har xil valuelardan iborat array qabul qilsin
 va array ichidagi sonlar yigindisini hisoblab chiqqan javobni qaytarsin.
 MASALAN: calculateSumOfNumbers([10, "10", {son: 10}, true, 35]) return 45.
 */
+/*
 function calculateSumOfNumbers(params: any[]) {
   let sum: number = 0;
   for (let i = 0; i < params.length; i++) {
@@ -18,6 +36,7 @@ const result1 = calculateSumOfNumbers([10, "10", { son: 10 }, true, 35]);
 console.log(result1);
 const result2 = calculateSumOfNumbers(["10", { son: 10 }, true, "MIT-5", 100]);
 console.log(result2);
+*/
 
 /* N-TASK
 Shunday function yozing, u string qabul qilsin
