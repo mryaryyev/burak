@@ -1,10 +1,43 @@
 console.log("TRAIN AREA!");
 
+/* Q-TASK
+Shunday function yozing,
+u 2 ta parametrgga ega bolib birinchisi object, ikkinchisi string.
+Agar string parametr objectni propertysi bolsa true bolmasa false qaytarsin.
+MASALAN: hasProperty({name: "BMW", model: "M3"}, "model") return true;
+MASALAN: hasProperty({name: "BMW", model: "M3"}, "year") return false.
+*/
+// 1.option
+function hasProperty1(param1: { [key: string]: any }, param2: string) {
+  for (let key in param1) {
+    if (key === param2) {
+      return true;
+    }
+  }
+  return false;
+}
+const result1 = hasProperty1({ name: "BMW", model: "M3" }, "model");
+console.log(result1);
+const result2 = hasProperty1({ name: "BMW", model: "M3" }, "year");
+console.log(result2);
+
+console.log("======");
+
+// 2.option
+function hasProperty2(param1: { [key: string]: any }, param2: string): boolean {
+  return param2 in param1;
+}
+const result3 = hasProperty2({ name: "BMW", model: "M3" }, "model");
+console.log(result3);
+const result4 = hasProperty2({ name: "BMW", model: "M3" }, "year");
+console.log(result4);
+
 /* P-TASK
 Shunday function yozing, u object qabul qilsin
 va arrayni object arrayga otkazib arrayni qaytarsin.
 MASALAN: objectToArray({a: 10, b: 20}) return [["a", 10], ["b", 20]].
 */
+/*
 function objectToArray(params: { [key: string]: any }) {
   let result = [];
   for (let key in params) {
@@ -16,6 +49,7 @@ const result1 = objectToArray({ a: 10, b: 20 });
 console.log(result1);
 const result2 = objectToArray({ KR: 82, TM: 993 });
 console.log(result2);
+*/
 
 /* O-TASk
 Shunday function yozing, u har xil valuelardan iborat array qabul qilsin
