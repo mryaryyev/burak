@@ -19,3 +19,9 @@
     Traditional Frontend Development    =>  BSSR (Admin)                 =>  EJS
     Modern Frontend Development         =>  SPA (Users' application)     =>  REACT (library)
  */
+
+/* 
+    Cookies:
+    request join
+    self destroy
+*/
