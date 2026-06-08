@@ -1,5 +1,25 @@
 console.log("TRAIN AREA!");
 
+/* R-TASK
+Shunday function yozing, u string parametrga ega bolsin.
+String "1+2" holatda pass qilinganda string ichidagi sonlar yigindisini number holatda qaytarsin.
+MASALAN: calculate("1+3") return 4.
+*/
+function calculate(params: string): number {
+  const numbers = params.match(/\d+/g);
+  if (!numbers) return 0;
+
+  let total = 0;
+  for (let i = 0; i < numbers.length; i++) {
+    total += Number(numbers[i]);
+  }
+  return total;
+}
+const result1 = calculate("1+3");
+console.log(result1);
+const result2 = calculate("1+*7+5b5");
+console.log(result2);
+
 /* Q-TASK
 Shunday function yozing,
 u 2 ta parametrgga ega bolib birinchisi object, ikkinchisi string.
@@ -8,6 +28,7 @@ MASALAN: hasProperty({name: "BMW", model: "M3"}, "model") return true;
 MASALAN: hasProperty({name: "BMW", model: "M3"}, "year") return false.
 */
 // 1.option
+/*
 function hasProperty1(param1: { [key: string]: any }, param2: string) {
   for (let key in param1) {
     if (key === param2) {
@@ -31,6 +52,7 @@ const result3 = hasProperty2({ name: "BMW", model: "M3" }, "model");
 console.log(result3);
 const result4 = hasProperty2({ name: "BMW", model: "M3" }, "year");
 console.log(result4);
+*/
 
 /* P-TASK
 Shunday function yozing, u object qabul qilsin
