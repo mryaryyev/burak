@@ -38,4 +38,3 @@ const product_storage = multer.diskStorage({
 
 export const uploadProductImage = multer({storage: product_storage})
 */
-
