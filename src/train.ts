@@ -1,10 +1,34 @@
 console.log("TRAIN AREA!");
 
+/* S-TASK
+Shunday function yozing, u numberlardan tashkil topgan array qabul qilsin
+va osha numberlar orasidagi tushib qolgan sonni topib uni return qilsin.
+MASALAN: missingNumber([3, 0, 1]) return 2.
+*/
+function missingNumber(params: number[]) {
+  const sorted = params.sort((a, b) => a - b);
+
+  for (let i = 0; i < sorted.length - 1; i++) {
+    if (sorted[i] + 1 !== sorted[i + 1]) {
+      return sorted[i] + 1;
+    }
+  }
+  return "All right, no missing number";
+}
+const result1 = missingNumber([3, 0, 1]);
+console.log(result1);
+const result2 = missingNumber([8, 6, 9]);
+console.log(result2);
+const result3 = missingNumber([8, 7, 9]);
+console.log(result3);
+const result4 = missingNumber([10, 12, 11]);
+console.log(result4);
 /* R-TASK
 Shunday function yozing, u string parametrga ega bolsin.
 String "1+2" holatda pass qilinganda string ichidagi sonlar yigindisini number holatda qaytarsin.
 MASALAN: calculate("1+3") return 4.
 */
+/*
 function calculate(params: string): number {
   const numbers = params.match(/\d+/g);
   if (!numbers) return 0;
@@ -19,6 +43,7 @@ const result1 = calculate("1+3");
 console.log(result1);
 const result2 = calculate("1+*7+5b5");
 console.log(result2);
+*/
 
 /* Q-TASK
 Shunday function yozing,
