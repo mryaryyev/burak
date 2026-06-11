@@ -1,10 +1,25 @@
 console.log("TRAIN AREA!");
 
+/* T-TASK
+Shunday function yozing, u sonlardan tashkil topgan 2 ta array qabul qilsin
+a ikkala arraydagi sonlarni tartiblab bir arrayda qaytarsin.
+MASALAN: mergeSortedArrays([0,3,4,31], [4,6,30]) return [0,3,4,4,6,30,31].
+*/
+function mergeSortedArrays(params1: number[], params2: number[]) {
+  const mergedArray = [...params1, ...params2];
+  return mergedArray.sort((a, b) => a - b);
+}
+const result1 = mergeSortedArrays([0, 3, 4, 31], [4, 6, 30]);
+console.log(result1);
+const result2 = mergeSortedArrays([0, 50, 2, 1], [85, 98, 250]);
+console.log(result2);
+
 /* S-TASK
 Shunday function yozing, u numberlardan tashkil topgan array qabul qilsin
 va osha numberlar orasidagi tushib qolgan sonni topib uni return qilsin.
 MASALAN: missingNumber([3, 0, 1]) return 2.
 */
+/*
 function missingNumber(params: number[]) {
   const sorted = params.sort((a, b) => a - b);
 
@@ -23,6 +38,7 @@ const result3 = missingNumber([8, 7, 9]);
 console.log(result3);
 const result4 = missingNumber([10, 12, 11]);
 console.log(result4);
+*/
 /* R-TASK
 Shunday function yozing, u string parametrga ega bolsin.
 String "1+2" holatda pass qilinganda string ichidagi sonlar yigindisini number holatda qaytarsin.
