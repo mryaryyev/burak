@@ -1,10 +1,32 @@
 console.log("TRAIN AREA!");
 
+/* U-TASK
+Shunday function yozing, uni number parametri bolsin
+va 0 dan berilgan parametrgacha bolgan oraliqdagi faqat toq sonlar nechtaligini return qilsin
+MASALAN: sumOdds(9) return 4; sumOdds(11) return 5.
+*/
+function sumOdds(params: number): number {
+  let odds: number = 0;
+
+  for (let i = 0; i < params; i++) {
+    if (i % 2 !== 0) {
+      odds += 1;
+    }
+  }
+  return odds;
+}
+
+const result1 = sumOdds(9);
+console.log(result1);
+const result2 = sumOdds(11);
+console.log(result2);
+
 /* T-TASK
 Shunday function yozing, u sonlardan tashkil topgan 2 ta array qabul qilsin
 a ikkala arraydagi sonlarni tartiblab bir arrayda qaytarsin.
 MASALAN: mergeSortedArrays([0,3,4,31], [4,6,30]) return [0,3,4,4,6,30,31].
 */
+/*
 function mergeSortedArrays(params1: number[], params2: number[]) {
   const mergedArray = [...params1, ...params2];
   return mergedArray.sort((a, b) => a - b);
@@ -13,6 +35,7 @@ const result1 = mergeSortedArrays([0, 3, 4, 31], [4, 6, 30]);
 console.log(result1);
 const result2 = mergeSortedArrays([0, 50, 2, 1], [85, 98, 250]);
 console.log(result2);
+*/
 
 /* S-TASK
 Shunday function yozing, u numberlardan tashkil topgan array qabul qilsin
