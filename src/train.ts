@@ -1,10 +1,34 @@
 console.log("TRAIN AREA!");
 
+/* V-TASK
+Shunday function yozing, uni string parametri bolsin
+va stringdagi harf va u harf necha marta takrorlangani sonidan tashkil topgan object qaytarsin.
+MASALAN: countChars("hello") return {h: 1, e: 1, l: 2, o: 1}.
+*/
+function countChars(param: string) {
+  let obj: { [key: string]: number } = {};
+  for (let i = 0; i < param.length; i++) {
+    const letter = param[i];
+
+    if (obj[letter]) {
+      obj[letter] += 1;
+    } else {
+      obj[letter] = 1;
+    }
+  }
+  return obj;
+}
+const result1 = countChars("hello");
+console.log(result1);
+const result2 = countChars("ashgabat");
+console.log(result2);
+
 /* U-TASK
 Shunday function yozing, uni number parametri bolsin
 va 0 dan berilgan parametrgacha bolgan oraliqdagi faqat toq sonlar nechtaligini return qilsin
 MASALAN: sumOdds(9) return 4; sumOdds(11) return 5.
 */
+/*
 function sumOdds(params: number): number {
   let odds: number = 0;
 
@@ -20,6 +44,7 @@ const result1 = sumOdds(9);
 console.log(result1);
 const result2 = sumOdds(11);
 console.log(result2);
+*/
 
 /* T-TASK
 Shunday function yozing, u sonlardan tashkil topgan 2 ta array qabul qilsin
