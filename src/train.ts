@@ -1,10 +1,36 @@
 console.log("TRAIN AREA!");
 
+/* Shunday function yozing, uni array va number parametrlari bolsin.
+Function arrayni numberda berilgan uzunlikda kesib bolaklarga ajratilgan array holatida qaytarsin.
+MASALAN: chunkArray([1,2,3,4,5,6,7,8,9,10], 3) return [[1,2,3], [4,5,6], [7,8,9], [10]].
+*/
+function chunkArray(param1: number[], param2: number) {
+  let result: number[][] = [];
+  let part: number[] = [];
+
+  for (let i = 0; i < param1.length; i++) {
+    part.push(param1[i]);
+
+    if (part.length === param2 || i === param1.length - 1) {
+      result.push(part);
+
+      part = [];
+    }
+  }
+  return result;
+}
+const result1 = chunkArray([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 3);
+console.log(result1);
+
+const result2 = chunkArray([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11], 4);
+console.log(result2);
+
 /* V-TASK
 Shunday function yozing, uni string parametri bolsin
 va stringdagi harf va u harf necha marta takrorlangani sonidan tashkil topgan object qaytarsin.
 MASALAN: countChars("hello") return {h: 1, e: 1, l: 2, o: 1}.
 */
+/*
 function countChars(param: string) {
   let obj: { [key: string]: number } = {};
   for (let i = 0; i < param.length; i++) {
@@ -22,6 +48,7 @@ const result1 = countChars("hello");
 console.log(result1);
 const result2 = countChars("ashgabat");
 console.log(result2);
+*/
 
 /* U-TASK
 Shunday function yozing, uni number parametri bolsin
