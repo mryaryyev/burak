@@ -1,9 +1,47 @@
 console.log("TRAIN AREA!");
 
+/* X-TASK
+Shunday function yozing, uni object va string parapetrlari bolsin.
+Function string parametri object ichida necha marotaba takrorlanganligini qaytarsin
+(nested object bolsa ham sanasin).
+MASALAN: countOccurrences({model: 'Bugatti', steer: {model: 'HANKOOK', size: 30}}, 'model') return 2.
+*/
+function countOccurrences(param1: any, param2: string): number {
+  let count = 0;
+  if (typeof param1 === "object" && param1 !== null) {
+    for (const key in param1) {
+      if (key === param2) {
+        count++;
+      }
+
+      if (typeof param1[key] === "object" && param1[key] !== null) {
+        count += countOccurrences(param1[key], param2);
+      }
+    }
+  }
+  return count;
+}
+
+const result1 = countOccurrences(
+  { model: "Bugatti", steer: { model: "HANKOOK", size: 30 } },
+  "model",
+);
+console.log(result1);
+
+const result2 = countOccurrences(
+  {
+    seoul: "capital",
+    korea: { seoul: "big city", programming: { seoul: "gangnam" } },
+  },
+  "seoul",
+);
+console.log(result2);
+
 /* Shunday function yozing, uni array va number parametrlari bolsin.
 Function arrayni numberda berilgan uzunlikda kesib bolaklarga ajratilgan array holatida qaytarsin.
 MASALAN: chunkArray([1,2,3,4,5,6,7,8,9,10], 3) return [[1,2,3], [4,5,6], [7,8,9], [10]].
 */
+/*
 function chunkArray(param1: number[], param2: number) {
   let result: number[][] = [];
   let part: number[] = [];
@@ -24,6 +62,7 @@ console.log(result1);
 
 const result2 = chunkArray([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11], 4);
 console.log(result2);
+*/
 
 /* V-TASK
 Shunday function yozing, uni string parametri bolsin
