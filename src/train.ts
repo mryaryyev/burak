@@ -1,11 +1,33 @@
 console.log("TRAIN AREA!");
 
+/* MITASK-Y
+Shunday function yozing, uni 2 ta array parapetri bolsin.
+Function ikkala arrayda ham ishtirok etgan qiymatlarni bir arrayda qaytarsin.
+MASALAN: findIntersection([1,2,3], [3,2,0]) return [2,3].
+*/
+function findIntersection(param1: any[], param2: any[]) {
+  const result: any[] = [];
+
+  for (let i = 0; i < param1.length; i++) {
+    if (param2.includes(param1[i])) {
+      result.push(param1[i]);
+    }
+  }
+  return result;
+}
+const result1 = findIntersection([1, 2, 3], [3, 2, 0]);
+console.log(result1);
+
+const result2 = findIntersection([1, "a", 3], [3, "a", 0]);
+console.log(result2);
+
 /* X-TASK
 Shunday function yozing, uni object va string parapetrlari bolsin.
 Function string parametri object ichida necha marotaba takrorlanganligini qaytarsin
 (nested object bolsa ham sanasin).
 MASALAN: countOccurrences({model: 'Bugatti', steer: {model: 'HANKOOK', size: 30}}, 'model') return 2.
 */
+/*
 function countOccurrences(param1: any, param2: string): number {
   let count = 0;
   if (typeof param1 === "object" && param1 !== null) {
@@ -36,6 +58,7 @@ const result2 = countOccurrences(
   "seoul",
 );
 console.log(result2);
+*/
 
 /* Shunday function yozing, uni array va number parametrlari bolsin.
 Function arrayni numberda berilgan uzunlikda kesib bolaklarga ajratilgan array holatida qaytarsin.
