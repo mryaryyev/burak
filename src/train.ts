@@ -1,10 +1,31 @@
 console.log("TRAIN AREA!");
 
+/* MITASK-Z
+Shunday function yozing, uni sonlardan tashkil topgan array qabul qilsin.
+Function arraydagi juft sonlarni yigindisini qaytarsin.
+MASALAN: sumEvens([1,2,3]) return 2.
+*/
+function sumEvens(param: number[]) {
+  let sum: number = 0;
+
+  for (let i = 0; i < param.length; i++) {
+    if (param[i] % 2 === 0) {
+      sum += param[i];
+    }
+  }
+  return sum;
+}
+const result1 = sumEvens([1, 2, 3]);
+console.log(result1);
+const result2 = sumEvens([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+console.log(result2);
+
 /* MITASK-Y
 Shunday function yozing, uni 2 ta array parapetri bolsin.
 Function ikkala arrayda ham ishtirok etgan qiymatlarni bir arrayda qaytarsin.
 MASALAN: findIntersection([1,2,3], [3,2,0]) return [2,3].
 */
+/*
 function findIntersection(param1: any[], param2: any[]) {
   const result: any[] = [];
 
@@ -20,6 +41,7 @@ console.log(result1);
 
 const result2 = findIntersection([1, "a", 3], [3, "a", 0]);
 console.log(result2);
+*/
 
 /* X-TASK
 Shunday function yozing, uni object va string parapetrlari bolsin.
